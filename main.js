@@ -14,13 +14,21 @@ class Game {
         this.player = {
             x: 0,
             y: 0,
-            height: 50,
-            width: 60
+            width: 60,
+            height: 50
         }
     }
 
-    update = () => {}
+    update = () => {
+        this.player.x += 1;
+    }
 
-    render = () => {}
+    render = () => {
+        const { x, y, width, height } = this.player;
+        ctx.beginPath();
+        ctx.fillStyle = 'red';
+        ctx.fillRect(x, y, width, height);
+        ctx.stroke();
+    }
 
 }
