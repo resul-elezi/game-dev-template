@@ -6,9 +6,18 @@ const ctx = canvas.getContext('2d');
 console.log('Context: ', ctx);
 
 class Game {
-    constructor() {}
+    constructor() {
+        this.player = undefined;
+    }
 
-    initialize = () => {}
+    initialize = () => {
+        this.player = {
+            x: 0,
+            y: 0,
+            height: 50,
+            width: 60
+        }
+    }
 
     update = () => {}
 
