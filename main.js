@@ -21,6 +21,8 @@ class Game {
 
     update = () => {
         this.player.x += 1;
+
+        requestAnimationFrame(this.update);
     }
 
     render = () => {
@@ -29,6 +31,8 @@ class Game {
         ctx.fillStyle = 'red';
         ctx.fillRect(x, y, width, height);
         ctx.stroke();
+
+        requestAnimationFrame(this.render);
     }
 
 }
