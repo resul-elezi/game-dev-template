@@ -42,12 +42,37 @@ class Game {
         /* 
         
         {
-            key: ...,
+            key: string
             type: string
-            
+
         }
 
         */
+
+        const { key, type } = e;
+
+        if (this.player) {
+
+            if (type === 'keydown') {
+
+                switch (key) {
+                    case 'w':
+                        this.player.y -= 1;
+                        break;
+                    case 'a':
+                        this.player.x -= 1;
+                        break;
+                    case 's':
+                        this.player.y += 1;
+                        break;
+                    case 'd':
+                        this.player.x += 1;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
 
     }
 
