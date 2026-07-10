@@ -32,3 +32,8 @@ class Game {
     }
 
 }
+
+const game = new Game();
+game.initialize();
+game.update();
+game.render();
