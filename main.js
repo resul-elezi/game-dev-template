@@ -17,10 +17,12 @@ class Game {
             width: 60,
             height: 50
         }
+
+        document.addEventListener('keyup', this.handleUserInput);
+        document.addEventListener('keydown', this.handleUserInput);
     }
 
     update = () => {
-        this.player.x += 1;
 
         requestAnimationFrame(this.update);
     }
@@ -33,6 +35,20 @@ class Game {
         ctx.stroke();
 
         requestAnimationFrame(this.render);
+    }
+
+    handleUserInput = (e) => {
+
+        /* 
+        
+        {
+            key: ...,
+            type: string
+            
+        }
+
+        */
+
     }
 
 }
