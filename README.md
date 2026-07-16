@@ -1,1 +1,1 @@
-# A game development template based on the ESC (Entity Component System) software architecture
+# A game development template based on the ECS (Entity Component System) software architecture
