@@ -10,6 +10,7 @@ export const ctx = canvas.getContext("2d");
 class Game {
     constructor() {
         this.player = undefined;
+        this.registry = new Registry();
     }
 
     initialize = () => {
@@ -19,6 +20,28 @@ class Game {
             width: 60,
             height: 50
         }
+
+        this.registry.addSystem('MovementSystem');
+
+        const dummyPositionComponent = {
+            name: 'Position',
+            value: {
+                x: 0,
+                y: 0,
+                width: 50,
+                height: 50
+            }
+        };
+
+        const dummyMovementComponent = {
+            name: 'Movement',
+            value: {
+                vX: 0,
+                vY: 0
+            }
+        };
+
+        this.registry.createEntity();
 
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
