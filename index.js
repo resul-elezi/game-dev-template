@@ -1,11 +1,11 @@
-import Registry from "./classes/Registry.js";
+import Registry from './classes/Registry.js';
 
-export const canvas = document.getElementById("game-screen");
+export const canvas = document.getElementById('game-screen');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-export const ctx = canvas.getContext("2d");
+export const ctx = canvas.getContext('2d');
 
 class Game {
     constructor() {

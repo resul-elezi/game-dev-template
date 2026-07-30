@@ -1,4 +1,4 @@
-import { canvas, ctx } from "../index.js";
+import { canvas, ctx } from '../index.js';
 
 class System {
     constructor(systemType) {
@@ -10,7 +10,7 @@ class System {
 class MovementSystem extends System {
     constructor(systemType) {
         super(systemType);
-        this.componentRequirements = ["Movement", "Position"];
+        this.componentRequirements = ['Movement', 'Position'];
     }
 
     update = () => {
@@ -28,7 +28,7 @@ class MovementSystem extends System {
 class RenderSystem extends System {
     constructor(systemType) {
         super(systemType);
-        this.componentRequirements = ["Position"];
+        this.componentRequirements = ['Position'];
     }
 
     update = () => {
@@ -42,7 +42,7 @@ class RenderSystem extends System {
 
             c.clearRect(0, 0, canvas.width, canvas.height)
             c.beginPath();
-            c.fillStyle = "red";
+            c.fillStyle = 'red';
             c.fillRect(x, y, width, height);
             c.stroke();
 
