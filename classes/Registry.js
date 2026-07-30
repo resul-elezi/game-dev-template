@@ -55,6 +55,11 @@ class Registry {
     }
     addEntityToSystem = (entity) => {
         Object.values(this.systems).forEach((system) => {
+
+            const componentRequirements = system['componentRequirements'];
+            let addToSystem = true;
+
+            // for () {}
             console.log(system);
         })
     };
