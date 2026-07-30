@@ -17,6 +17,8 @@ class Registry {
         for (let i = 0; i < components.length; i++) {
             const component = components[i];
 
+            switch (component['name']) {}
+
         }
     }
 }
