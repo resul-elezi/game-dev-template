@@ -22,3 +22,5 @@ class MovementSystem extends System {
         }
     }
 }
+
+export { MovementSystem };
