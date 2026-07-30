@@ -17,7 +17,7 @@ class Game {
         this.player = {
             x: 0,
             y: 0,
-            width: 60,
+            width: 50,
             height: 50
         }
 
@@ -41,7 +41,7 @@ class Game {
             }
         };
 
-        this.registry.createEntity();
+        this.registry.createEntity([dummyPositionComponent, dummyMovementComponent]);
 
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
