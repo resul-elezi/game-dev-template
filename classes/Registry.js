@@ -39,6 +39,20 @@ class Registry {
 
         return newEntity;
     }
+    // systemType: string
+    addSystem = (systemType) => {
+        let newSystem;
+        switch (systemType) {
+            case 'MovementSystem': {
+                newSystem = new MovementSystem(systemType);
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+        this.systems[systemType] = newSystem;
+    }
 }
 
 export default Registry;
