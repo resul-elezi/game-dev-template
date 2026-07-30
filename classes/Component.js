@@ -10,15 +10,15 @@ class PositionComponent extends Component {
 
         this.x = componentObj.x;
         this.y = componentObj.y;
+        this.width = componentObj.width;
+        this.height = componentObj.height;
+
     }
 }
 
-
-
 class MovementComponent extends Component {
-    constructor(componentType, componentObj) {
+    constructor(componentType, componentObj) {      // Movement
         super(componentType);
-
         this.vX = componentObj.vX;
         this.vY = componentObj.vY;
         this.collisionX = false;

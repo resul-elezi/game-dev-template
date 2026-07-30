@@ -1,8 +1,9 @@
 class Entity {
     constructor(id, registry) {
-        this.id = this.id;
+        this.id = id;
         this.registry = registry;
-        this.components = {};
+        this.components = {}
+       
     }
 }
 

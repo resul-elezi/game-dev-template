@@ -1,13 +1,11 @@
-'use strict';
+import Registry from "./classes/Registry.js";
 
-const canvas = document. getElementById('game-screen');
+export const canvas = document.getElementById("game-screen");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const ctx = canvas.getContext('2d');
-
-console.log('Context: ', ctx);
+export const ctx = canvas.getContext("2d");
 
 class Game {
     constructor() {
@@ -87,3 +85,4 @@ const game = new Game();
 game.initialize();
 game.update();
 game.render();
+
