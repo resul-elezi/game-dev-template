@@ -33,7 +33,7 @@ class Game {
 
     render = () => {
         const { x, y, width, height } = this.player;
-        ctx.clearRect(0, 0, width, height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         ctx.fillStyle = 'red';
         ctx.fillRect(x, y, width, height);
