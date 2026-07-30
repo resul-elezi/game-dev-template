@@ -53,6 +53,11 @@ class Registry {
         }
         this.systems[systemType] = newSystem;
     }
+    addEntityToSystem = (entity) => {
+        Object.values(this.systems).forEach((system) => {
+            console.log(system);
+        })
+    };
 }
 
 export default Registry;
