@@ -78,32 +78,47 @@ class Game {
         const { key, type } = e;
 
         if (this.player) {
-
+            let playerMovementComponent = this.player.components['Movement'];
             if (type === 'keydown') {
 
-                let playerMovementComponent = this.player.components['Movement'];
                 switch (key) {
                     case 'w':
-                        playerMovementComponent.vY -= 1;
+                        playerMovementComponent.vY = -1;
                         break;
                     case 'a':
-                        playerMovementComponent.vX -= 1;
+                        playerMovementComponent.vX = -1;
                         break;
                     case 's':
-                        playerMovementComponent.vY += 1;
+                        playerMovementComponent.vY = 1
                         break;
                     case 'd':
-                        playerMovementComponent.vX += 1;
+                        playerMovementComponent.vX = 1;
                         break;
+                    default:
+                        break;
+                }
+
+            }
+            else if (type === 'keyup') {
+                switch (key) {
+                    case 'w':
+                    case 's': {
+                        playerMovementComponent.vY = 0;
+                        break;
+                    }
+                    case 'a':
+                    case 'd': {
+                        playerMovementComponent.vX = 0;
+                        break;
+                    }
                     default:
                         break;
                 }
             }
         }
-
     }
-
 }
+
 
 const game = new Game();
 game.initialize();
