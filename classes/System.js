@@ -40,11 +40,11 @@ class RenderSystem extends System {
 
 
 
-            c.clearRect(0, 0, canvas.width, canvas.height)
-            c.beginPath();
-            c.fillStyle = 'red';
-            c.fillRect(x, y, width, height);
-            c.stroke();
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            ctx.fillRect(x, y, width, height);
+            ctx.stroke();
 
         }
 
