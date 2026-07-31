@@ -51,6 +51,7 @@ class Game {
 
     update = () => {
 
+        this.registry.getSystem('MovementSystem').update();
         requestAnimationFrame(this.update);
     }
 

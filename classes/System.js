@@ -21,6 +21,7 @@ class MovementSystem extends System {
 
             Position.x += Movement.vX;
             Position.y += Movement.vY;
+            console.log(Position.x, Position.y);
         }
     }
 }
