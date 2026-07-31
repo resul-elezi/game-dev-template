@@ -71,6 +71,9 @@ class Registry {
             }
         })
     };
+    getSystem = (systemType) => {
+        return this.systems[systemType];
+    }
 }
 
 export default Registry;
