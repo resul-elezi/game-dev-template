@@ -14,12 +14,12 @@ class Game {
     }
 
     initialize = () => {
-        this.player = {
-            x: 0,
-            y: 0,
-            width: 50,
-            height: 50
-        }
+        // this.player = {
+        //     x: 0,
+        //     y: 0,
+        //     width: 50,
+        //     height: 50
+        // }
 
         this.registry.addSystem('MovementSystem');
         this.registry.addSystem('RenderSystem');
@@ -42,8 +42,8 @@ class Game {
             }
         };
 
-        const entity = this.registry.createEntity([dummyPositionComponent, dummyMovementComponent]);
-        this.registry.addEntityToSystem(entity);
+        this.player = this.registry.createEntity([dummyPositionComponent, dummyMovementComponent]);
+        this.registry.addEntityToSystem(this.player);
 
 // console.log(this.registry.systems);
         document.addEventListener('keyup', this.handleUserInput);
@@ -81,18 +81,19 @@ class Game {
 
             if (type === 'keydown') {
 
+                let playerMovementComponent = this.player.components['Movement'];
                 switch (key) {
                     case 'w':
-                        this.player.y -= 1;
+                        playerMovementComponent.vY -= 1;
                         break;
                     case 'a':
-                        this.player.x -= 1;
+                        playerMovementComponent.vX -= 1;
                         break;
                     case 's':
-                        this.player.y += 1;
+                        playerMovementComponent.vY += 1;
                         break;
                     case 'd':
-                        this.player.x += 1;
+                        playerMovementComponent.vX += 1;
                         break;
                     default:
                         break;
