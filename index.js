@@ -44,6 +44,7 @@ class Game {
         const entity = this.registry.createEntity([dummyPositionComponent, dummyMovementComponent]);
         this.registry.addEntityToSystem(entity);
 
+console.log(this.registry.systems);
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
     }
