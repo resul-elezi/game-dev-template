@@ -61,6 +61,10 @@ class Registry {
 
             for (let i = 0; i < componentRequirements.length; i ++) {
                 const req = componentRequirements[i];
+                if (entity.components[req] === undefined) {
+                    addToSystem = false;
+                    break;
+                }
             }
             console.log(system);
         })
