@@ -47,6 +47,10 @@ class Registry {
                 newSystem = new MovementSystem(systemType);
                 break;
             }
+            case 'RenderSystem': {
+                newSystem = new RenderSystem(systemType);
+                break;
+            }
             default: {
                 break;
             }
