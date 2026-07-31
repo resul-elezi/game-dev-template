@@ -22,6 +22,7 @@ class Game {
         }
 
         this.registry.addSystem('MovementSystem');
+        this.registry.addSystem('RenderSystem');
 
         const dummyPositionComponent = {
             name: 'Position',
@@ -52,6 +53,7 @@ class Game {
     update = () => {
 
         this.registry.getSystem('MovementSystem').update();
+        this.registry.getSystem('RenderSystem').update();
         requestAnimationFrame(this.update);
     }
 
