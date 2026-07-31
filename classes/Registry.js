@@ -59,7 +59,9 @@ class Registry {
             const componentRequirements = system['componentRequirements'];
             let addToSystem = true;
 
-            // for () {}
+            for (let i = 0; i < componentRequirements.length; i ++) {
+                const req = componentRequirements[i];
+            }
             console.log(system);
         })
     };
