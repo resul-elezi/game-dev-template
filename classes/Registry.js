@@ -66,7 +66,9 @@ class Registry {
                     break;
                 }
             }
-            console.log(system);
+            if (addToSystem) {
+                system.entities.push(entity);
+            }
         })
     };
 }
