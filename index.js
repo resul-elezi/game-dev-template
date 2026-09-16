@@ -27,7 +27,7 @@ class Game {
         const dummyPositionComponent = {
             name: 'Position',
             value: {
-                x: 0,
+                x: 2, // vorher war es 0
                 y: 0,
                 width: 50,
                 height: 50
@@ -35,17 +35,19 @@ class Game {
         };
 
         const dummyMovementComponent = {
-            name: 'Movement',
+            name: "Movement",
             value: {
                 vX: 0,
                 vY: 0
             }
         };
 
-        this.player = this.registry.createEntity([dummyPositionComponent, dummyMovementComponent]);
-        this.registry.addEntityToSystem(this.player);
+        this.player = this.registry.createEntity([dummyMovementComponent, dummyPositionComponent]);
 
-// console.log(this.registry.systems);
+        this.registry.addEntityToSystem(this.player)
+
+        // console.log(this.registry.systems);
+        
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
     }
