@@ -35,7 +35,7 @@ class Game {
         };
 
         const dummyMovementComponent = {
-            name: "Movement",
+            name: 'Movement',
             value: {
                 vX: 0,
                 vY: 0
@@ -62,6 +62,7 @@ class Game {
     render = () => {
         // const { x, y, width, height } = this.player; habe jetzt auskommentiert da es mit end of part 2 nicht uebereinstimmt
 
+        // const { x, y, width, height } = this.player;
         requestAnimationFrame(this.render);
     }
 
