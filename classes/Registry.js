@@ -31,7 +31,6 @@ class Registry {
                 default:
                     break;
             }
-
         }
 
         newEntity.components = newEntityComponents;
@@ -57,11 +56,9 @@ class Registry {
             }
         }
         this.systems[systemType] = newSystem;
-
     }
 
     addEntityToSystem = (entity) => {
-
         Object.values(this.systems).forEach((system) => {
             /*
                 system = {
@@ -88,7 +85,6 @@ class Registry {
             }
         })
     }
-
     getSystem = (systemType) => {
         return this.systems[systemType];
     }
