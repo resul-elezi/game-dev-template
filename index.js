@@ -47,7 +47,7 @@ class Game {
         this.registry.addEntityToSystem(this.player)
 
         // console.log(this.registry.systems);
-        
+
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
     }
@@ -60,7 +60,7 @@ class Game {
     }
 
     render = () => {
-        const { x, y, width, height } = this.player;
+        // const { x, y, width, height } = this.player; habe jetzt auskommentiert da es mit end of part 2 nicht uebereinstimmt
 
         requestAnimationFrame(this.render);
     }
@@ -69,11 +69,10 @@ class Game {
 
         /* 
         
-        {
-            key: string
-            type: string
-
-        }
+            {
+                key: string
+                type: string
+            }
 
         */
 
@@ -91,7 +90,7 @@ class Game {
                         playerMovementComponent.vX = -1;
                         break;
                     case 's':
-                        playerMovementComponent.vY = 1
+                        playerMovementComponent.vY = 1;
                         break;
                     case 'd':
                         playerMovementComponent.vX = 1;
@@ -120,7 +119,6 @@ class Game {
         }
     }
 }
-
 
 const game = new Game();
 game.initialize();
