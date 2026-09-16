@@ -39,7 +39,8 @@ class Registry {
 
         return newEntity;
     }
-    // systemType: string
+
+    // systemType: string, example: 'MovementSystem'
     addSystem = (systemType) => {
         let newSystem;
         switch (systemType) {
@@ -56,25 +57,38 @@ class Registry {
             }
         }
         this.systems[systemType] = newSystem;
+
     }
+
     addEntityToSystem = (entity) => {
+
         Object.values(this.systems).forEach((system) => {
+            /*
+                system = {
+                    entities: [],
+                    componentRequirements: ["Movement", ...],
+                    systemType: "MovementSystem",
+                    .... 
+                }
+            */
 
             const componentRequirements = system['componentRequirements'];
             let addToSystem = true;
 
-            for (let i = 0; i < componentRequirements.length; i ++) {
+            for (let i = 0; i < componentRequirements.length; i++) {
                 const req = componentRequirements[i];
                 if (entity.components[req] === undefined) {
                     addToSystem = false;
                     break;
                 }
             }
+
             if (addToSystem) {
                 system.entities.push(entity);
             }
         })
-    };
+    }
+
     getSystem = (systemType) => {
         return this.systems[systemType];
     }
