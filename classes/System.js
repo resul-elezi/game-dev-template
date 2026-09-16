@@ -3,7 +3,7 @@ import { canvas, ctx } from '../index.js';
 class System {
     constructor(systemType) {
         this.systemType = systemType;
-        this.entities = []
+        this.entities = [];
     }
 }
 
