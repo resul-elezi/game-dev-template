@@ -1,12 +1,12 @@
-import { MovementComponent, PositionComponent } from "./Component.js";
-import Entity from "./Entity.js";
-import { MovementSystem, RenderSystem } from "./System.js";
+import { MovementComponent, PositionComponent } from './Component.js';
+import Entity from './Entity.js';
+import { MovementSystem, RenderSystem } from './System.js';
 
 class Registry {
     constructor() {
         this.numberOfEntities = 0;
         this.entitiesToBeAdded = [];
-        this.systems = {}
+        this.systems = {};
     }
 
     // array of objects
